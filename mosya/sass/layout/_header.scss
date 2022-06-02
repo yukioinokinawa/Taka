@@ -1,7 +1,30 @@
 .l-header {
     display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: aqua;
+    color: black;
+    }
+
+.l-headerlogo {
+    display: flex;
+
+    &__p {
+        text-decoration: none;
+    }
 }
 
-.l-h-nav{
-    display:flex;
+.l-menu{
+    display: flex;
+    list-style: none;
+
+    &__item {
+        
+    }
+}
+
+
+.l-submenu{
+    background: white;
+    display: none;
 }

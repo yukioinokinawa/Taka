@@ -53,14 +53,31 @@ input, button, textarea, select {
 /*テーマカラー*/
 html {
   font-size: 100%;
+  color: black;
 }
 
 .l-header {
   display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: aqua;
+  color: black;
 }
 
-.l-h-nav {
+.l-headerlogo {
   display: flex;
+}
+.l-headerlogo__p {
+  text-decoration: none;
+}
+
+.l-menu {
+  display: flex;
+  list-style: none;
+}
+.l-submenu {
+  background: white;
+  display: none;
 }
 
 /**Foundation*/
