@@ -51,8 +51,16 @@ input, button, textarea, select {
 }
 /*modern-css-reset　を使用*/
 /*テーマカラー*/
-.f-toppage {
-  background-image: "./mosya/mimages/bg-hero3.webp";
+html {
+  font-size: 100%;
+}
+
+.l-header {
+  display: flex;
+}
+
+.l-h-nav {
+  display: flex;
 }
 
 /**Foundation*/

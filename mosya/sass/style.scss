@@ -1,8 +1,23 @@
 /**Foundation*/
-@use 'Foundation/_reset.scss';
-@use 'Foundation/_base.scss';
+@use 'Foundation/_reset';
+@use 'Foundation/_base';
 
 /**layout*/
-
+@use 'layout/footer';
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/sidebar';
 
 /**object*/
+@use 'object/component/avatar';
+@use 'object/component/button';
+@use 'object/component/dialog';
+
+@use 'object/project/articles';
+@use 'object/project/comments';
+@use 'object/project/gallery';
+@use 'object/project/profile';
+
+@use 'object/utility/align';
+@use 'object/utility/display';
+@use 'object/utility/margin';
