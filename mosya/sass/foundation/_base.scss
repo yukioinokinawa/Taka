@@ -1,8 +1,52 @@
 $raise:#4298B3; 
 $raise_hover:#F3FAFB;
-/*テーマカラー*/
 
-html{
-    font-size: 100%;
-    color:black
+/*_bace.scss*/
+html {
+	font-size: 62.5%;
+	line-height: 1.6;
+	height: 100%;
+	scroll-behavior: smooth;
 }
+
+body {
+	color: #333333;
+	font-size: 1.6rem;
+	font-family: 'Mochiy Pop One', sans-serif;
+	min-width: 350px;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+img,
+video,
+object {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	display: block;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	transition: 0.4s;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (min-width: 640px) {
+			@content;
+		}
+	}
+	@if $point == pc {
+		@media (min-width: 750px) {
+			@content;
+		}
+	}
+}
+
+//参照　https://zenn.dev/yurukei20/books/10e7322a762178/viewer/c5c998

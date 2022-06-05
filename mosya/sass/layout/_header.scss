@@ -1,16 +1,24 @@
 .l-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 50px;
     background-color: aqua;
-    color: black;
     }
 
-.l-headerlogo {
+.l-headerlogo{
+    margin: 0 0 0 21px;
     display: flex;
 
-    &__p {
-        text-decoration: none;
+    &p {
+        margin-bottom: 0;
+    }
+
+    &a{
+        height: 70px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+
     }
 }
 
@@ -18,8 +26,10 @@
     display: flex;
     list-style: none;
 
-    &__item {
-        
+    &item {
+        box-sizing: border-box;
+        width: 100%;
+        margin:5px
     }
 }
 
