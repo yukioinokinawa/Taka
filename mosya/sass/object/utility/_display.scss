@@ -1,0 +1,14 @@
+/*utility/display*/
+
+.p-tophead{
+    position: relative;
+    overflow: hidden;
+    height: 650px;
+    background: url('/mosya/mimages/bg-hero1.png') no-repeat center center;
+    background-size: cover;
+
+    &__layer{
+        position:absolute
+        
+    }
+}

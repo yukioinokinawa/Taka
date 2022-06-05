@@ -18,17 +18,13 @@ body {
 	overflow-x: hidden;
 }
 
-img,
-video,
-object {
-	max-width: 100%;
-	height: auto;
-	border: none;
-	display: block;
+img {
+	vertical-align: middle;
+	border-style: none;
 }
 
 a {
-	color: #000;
+	color: #131D34;
 	text-decoration: none;
 	transition: 0.4s;
 	&:hover {
