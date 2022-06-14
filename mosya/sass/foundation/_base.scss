@@ -25,6 +25,7 @@ img {
 
 a {
 	color: #131D34;
+	display: block;
 	text-decoration: none;
 	transition: 0.4s;
 	&:hover {
@@ -32,17 +33,5 @@ a {
 	}
 }
 
-@mixin breakpoint($point) {
-	@if $point == tablet {
-		@media (min-width: 640px) {
-			@content;
-		}
-	}
-	@if $point == pc {
-		@media (min-width: 750px) {
-			@content;
-		}
-	}
-}
 
 //参照　https://zenn.dev/yurukei20/books/10e7322a762178/viewer/c5c998

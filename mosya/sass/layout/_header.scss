@@ -1,40 +1,76 @@
+/*header*/
+
 .l-header {
     width: 100%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: #ffff;
     }
 
 .l-headerlogo{
     margin: 0 0 0 21px;
+    padding-left: 10px;
     display: flex;
+    align-content: center;
+    align-items: center;
 
-    &p {
-        margin-bottom: 0;
+    &img{
+        width: 160px;
+        vertical-align: bottom;
     }
 
-    &a{
-        height: 70px;
+    &__p {
+        margin-left: 15px;
+    }
+
+}
+
+/*nav*/
+
+.l-nav{
+
+    &__btn{
+        display: none;
+    }
+    &__body{
         display: flex;
-        align-content: center;
-        align-items: center;
+        @media screen and (max-width: 1200px){
+            display: none;
+            position: absolute;
+            background-color: red;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            li {
+                position: relative;
+                white-space: nowrap;
+                a {
+                    display: flex;
+                    padding: 0 10px;
+                    height: 70px;
+                    align-items: center;
 
+                    &:hover{
+                        color:#131D34;
+                        background-color: #D4F1F8;
+                    }
+                }
+
+            }
+        
+        }
+        &__join a {
+            color:#ffff;
+        }
     }
+
 }
 
-.l-menu{
-    display: flex;
-    list-style: none;
-
-    &item {
-        box-sizing: border-box;
-        width: 100%;
-        margin:5px
+ul .sub-menu{
+    position: absolute;
+    &.close{
+        display: none;
     }
-}
-
-
-.l-submenu{
-    background: white;
-    display: none;
 }
