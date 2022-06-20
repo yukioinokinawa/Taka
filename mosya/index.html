@@ -19,12 +19,11 @@
 
         <!--ヘッダーnav　-->
         <div class="l-header-link"></div>
+
             <!--hamburger-->
-            <div class= "l-nav">
-                <button class="l-nav__btn humberger">
-                    <a href="">
-                        <span>メニューを開く</span>
-                    </a>
+            <div class= "p-gmenu">
+                <button class="p-hamburger js-hamburger">
+                    <span>menuボタン</span>
                 </button>
             
             <!--navリスト-->
@@ -149,12 +148,6 @@
         </div>
     </div>	
  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
- <script>
-    $(function(){
-        $('.menu-item').hover(function(){
-            $(this).children(".sub-menu").stop().slideToggle();
-            });
-        });
- </script>
+ <script src="./JS/nav.js"></script>
 </body>
 </html>
