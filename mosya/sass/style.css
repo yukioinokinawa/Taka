@@ -61,6 +61,7 @@ html {
 body {
   color: #333333;
   font-size: 1.6rem;
+  font-weight: 700;
   font-family: "Mochiy Pop One", sans-serif;
   min-width: 350px;
   width: 100%;
@@ -144,9 +145,27 @@ a:hover {
 
 ul .sub-menu {
   position: absolute;
+  top: 70px;
+  z-index: 1000;
 }
 ul .sub-menu.close {
   display: none;
+}
+ul .sub-menu li {
+  background-color: #D4F1F8;
+  font-weight: normal;
+}
+ul .sub-menu li a {
+  position: relative;
+}
+ul .sub-menu li a:hover {
+  background-color: #FFF;
+  color: #2498B3;
+}
+
+ul .l-nav__join a {
+  color: #FFF;
+  background-color: #2498B3;
 }
 
 .c-inner {

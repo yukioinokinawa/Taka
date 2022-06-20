@@ -70,7 +70,26 @@
 
 ul .sub-menu{
     position: absolute;
+    top: 70px;
+    z-index: 1000;
     &.close{
         display: none;
     }
+    li{
+        background-color: #D4F1F8;
+        font-weight: normal;
+        a{
+            position: relative;
+            &:hover{
+                background-color: #FFF;
+                color:#2498B3;
+            }
+        }
+    
+    }
+}
+
+ul .l-nav__join a {
+    color:#FFF;
+    background-color: #2498B3;
 }

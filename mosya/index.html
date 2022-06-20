@@ -27,7 +27,7 @@
                     </a>
                 </button>
             
-
+            <!--navリスト-->
                 <nav class="l-nav__body">
                     <ul class="menu nav-item">
                         <li class="sub menu-item">
@@ -48,80 +48,80 @@
                                 <li>
                                     <a href="">ご利用の流れ</a>
                                 </li>
-                        </ul>
-                    </li>
-                    <li class="sub menu-item">
-                        <a href="#">コース案内</a>
-                        <ul class="sub-menu close">
-                            <li>
-                                <a href="">マーケティングコース</a>
-                            </li>
-                            <li>
-                                <a href="">デザインコース</a>
-                            </li>
-                            <li>
-                                <a href="">WordPress副業コース</a>
-                            </li>
-                            <li>
-                                <a href="">AWSフルコース</a>
-                            </li>
-                            <li>
-                                <a href="">AWS自動化コース</a>
-                            </li>
-                            <li>
-                                <a href="">Javaフルコース</a>
-                            </li>
-                            <li>
-                                <a href="">Javeフレームワークコース</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub menu-item">
-                        <a href="#">講師紹介</a>
-                    </li>
-                    <li class="sub menu-item">
-                        <a href="#">卒業生の声・実績</a>
-                        <ul class="sub-menu close">
-                            <li>
-                                <a href="">卒業生の声</a>
-                            </li>
-                            <li>
-                                <a href="">転職・案件実績</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub menu-item">
-                        <a href="#">メディア</a>
-                        <ul class="sub-menu close">
-                            <li>
-                                <a href="">動画一覧</a>
-                            </li>
-                            <li>
-                                <a href="">掲載記事一覧</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sub menu-item">
-                        <a href="#">サポート</a>
-                        <ul class="sub-menu close">
-                            <li>
-                                <a href="">よくあるご質問</a>
-                            </li>
-                            <li>
-                                <a href="">お問合せ</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="l-nav__join">
-                        <a href="">受講お申込み</a>
-                    </li>
-                </ul>
+                            </ul>
+                        </li>
+                        <li class="sub menu-item">
+                            <a href="#">コース案内</a>
+                            <ul class="sub-menu close">
+                                <li>
+                                    <a href="">マーケティングコース</a>
+                                </li>
+                                <li>
+                                    <a href="">デザインコース</a>
+                                </li>
+                                <li>
+                                    <a href="">WordPress副業コース</a>
+                                </li>
+                                <li>
+                                    <a href="">AWSフルコース</a>
+                                </li>
+                                <li>
+                                    <a href="">AWS自動化コース</a>
+                                </li>
+                                <li>
+                                    <a href="">Javaフルコース</a>
+                                </li>
+                                <li>
+                                    <a href="">Javeフレームワークコース</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub menu-item">
+                            <a href="#">講師紹介</a>
+                        </li>
+                        <li class="sub menu-item">
+                            <a href="#">卒業生の声・実績</a>
+                            <ul class="sub-menu close">
+                                <li>
+                                    <a href="">卒業生の声</a>
+                                </li>
+                                <li>
+                                    <a href="">転職・案件実績</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub menu-item">
+                            <a href="#">メディア</a>
+                            <ul class="sub-menu close">
+                                <li>
+                                    <a href="">動画一覧</a>
+                                </li>
+                                <li>
+                                    <a href="">掲載記事一覧</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub menu-item">
+                            <a href="#">サポート</a>
+                            <ul class="sub-menu close">
+                                <li>
+                                    <a href="">よくあるご質問</a>
+                                </li>
+                                <li>
+                                    <a href="">お問合せ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="l-nav__join">
+                            <a href="">受講お申込み</a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>
     </header>
+
     <div class="l-main">
-        
         <div class="p-tophead">
             <div class="p-tophead__layer p-tophead__layer1">
                 <div class="main-ttl">
@@ -148,8 +148,13 @@
             </div>
         </div>
     </div>	
- <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-
+ <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+ <script>
+    $(function(){
+        $('.menu-item').hover(function(){
+            $(this).children(".sub-menu").stop().slideToggle();
+            });
+        });
  </script>
 </body>
 </html>
