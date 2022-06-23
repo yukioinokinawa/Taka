@@ -1,19 +1,18 @@
-/*ハンバーガーメニュー*/
-
-@use "../../foundation/mixin";
 @use "sass:math";
 
 $btnWidth   : 20px;
 $btnHeight  : 1px;
 $raise      :#4298B3; 
 
+/*ハンバーガーメニュー*/
 .p-hamburger{
-    width   :  60px;
+    width   : 60px;
     height  : 60px;
-    position:relative;
-    @include mixin.breakpoint(pc){
-        display:none;
+    position: relative;
+    @media screen and (min-width : 769px)  {
+        display: none;
     }
+        
     &::before,
     &::after {
         content : "";
@@ -21,7 +20,7 @@ $raise      :#4298B3;
         height  : $btnHeight;
         background: $raise;
         position: absolute;
-        left: calc( 50%- math.div( #{$btnWidth}, 2));
+        left: calc( 50% - math.div( #{$btnWidth}, 2));
         display:block;
         transition: transform 0.2s;
     }

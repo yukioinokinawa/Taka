@@ -1,4 +1,4 @@
-@use "../../Foundation/_mixin";
+@use "../foundation/mixin";
 
 
 /*header*/
@@ -8,7 +8,7 @@
     height: 70px;
     display: flex;
     justify-content: space-between;
-    background-color: #ffff;
+    background-color: #fff;
     }
 
 .l-headerlogo{
@@ -25,6 +25,9 @@
 
     &__p {
         margin-left: 15px;
+        @media screen and {
+            
+        }
     }
 
 }
