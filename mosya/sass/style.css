@@ -106,6 +106,11 @@ a:hover {
 .l-headerlogo__p {
   margin-left: 15px;
 }
+@media screen and (max-width: 1280px) {
+  .l-headerlogo__p {
+    display: none;
+  }
+}
 
 /*nav*/
 .l-nav__btn {
@@ -168,6 +173,26 @@ ul .l-nav__join a {
   background-color: #2498B3;
 }
 
+.l-nallow {
+  padding: 4em 0;
+  background-color: #000;
+  z-index: 500;
+}
+
+.l-wrap {
+  max-width: 1078px;
+  margin: 0 auto;
+}
+
+.l-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-top: -256px;
+  z-index: 1000;
+}
+
 .c-inner {
   max-width: 1220px;
   margin: 0 auto;
@@ -180,7 +205,7 @@ ul .l-nav__join a {
   height: 60px;
   position: relative;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .p-hamburger {
     display: none;
   }
@@ -231,11 +256,52 @@ body.is-open {
   position: relative;
   overflow: hidden;
   height: 650px;
-  background: url("/mosya/mimages/bg-hero1.png") no-repeat center center;
+  background: url("/mosya/mimages/bg-hero3.png") no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 767px) {
+  .p-tophead {
+    height: 300px;
+  }
 }
 .p-tophead__layer {
   position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.p-tophead__layer1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  background: url("/mosya/mimages/bg-hero1.png") no-repeat center center;
+  background-size: cover;
+  z-index: 200;
+}
+.p-tophead__layer2 {
+  background: url("/mosya/mimages/bg-hero2.png") no-repeat center center;
+  z-index: 100;
+}
+.p-tophead__body {
+  max-width: 530px;
+  border-radius: 10%;
+  padding: 43px 40px 19px 40px;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+.p-tophead__title {
+  text-align: center;
+}
+.p-tophead p {
+  margin: 1.3em 0 0.5em;
+}
+.p-tophead .btn a {
+  background-color: #4298B3;
+  color: #fff;
+  line-height: 1;
+  padding: 24px 37px;
+  display: inline-block;
 }
 
 /**Foundation*/

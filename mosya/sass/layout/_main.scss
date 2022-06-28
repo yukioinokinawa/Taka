@@ -1,1 +1,22 @@
 //main    
+
+.l-nallow{
+    padding: 4em 0;
+    background-color: #000;
+    z-index: 500;
+
+}
+
+.l-wrap{
+    max-width: 1078px;
+    margin: 0 auto;
+}
+
+.l-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-top: -256px;
+    z-index: 1000;    
+}
