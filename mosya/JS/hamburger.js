@@ -1,6 +1,6 @@
 jQuery( function( $ ){
     $(".js-hamburger").on("click", function(){
-        $(this).toggleclass("is-open");
-        $(".l-nav").toggleclass("is-open");
+        $(this).toggleClass("is-open");
+        $(".l-nav__body").toggleClass("is-open");
     });
 });

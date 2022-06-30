@@ -123,12 +123,20 @@ a:hover {
   .l-nav__body {
     display: none;
     position: absolute;
-    background-color: red;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
   }
 }
 .l-nav__body ul {
   list-style: none;
   display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .l-nav__body ul {
+    flex-direction: column;
+  }
 }
 .l-nav__body ul li {
   position: relative;
@@ -144,7 +152,7 @@ a:hover {
   color: #131D34;
   background-color: #D4F1F8;
 }
-.l-nav__body__join a {
+.l-nav__join a {
   color: #ffff;
 }
 
@@ -167,12 +175,49 @@ ul .sub-menu li a:hover {
   background-color: #FFF;
   color: #2498B3;
 }
+@media screen and (max-width: 1200px) {
+  ul .sub-menu li:hover {
+    opacity: 0.7;
+  }
+}
 
 ul .l-nav__join a {
   color: #FFF;
   background-color: #2498B3;
 }
+@media screen and (max-width: 1200px) {
+  ul .l-nav__join a {
+    display: none;
+  }
+}
 
+.is-open {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-item > a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 13px;
+    height: 2px;
+    width: 24px;
+    background-color: #121212;
+    z-index: 9;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 1200px) {
+  .menu-item > a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 24px;
+    height: 24px;
+    width: 2px;
+    background-color: #121212;
+  }
+}
 .l-nallow {
   padding: 4em 0;
   background-color: #000;
@@ -191,6 +236,24 @@ ul .l-nav__join a {
   color: #fff;
   margin-top: -256px;
   z-index: 1000;
+}
+
+.l-service {
+  margin: 0 50px;
+  width: 229px;
+}
+.l-service__title {
+  text-align: center;
+}
+.l-service__icon {
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  color: #000;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 6px #000;
+  font-size: 100px;
 }
 
 .c-inner {

@@ -39,19 +39,31 @@
     &__btn{
         display: none;
     }
+
     &__body{
         display: flex;
+
         @media screen and (max-width: 1200px){
             display: none;
             position: absolute;
-            background-color: red;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: #fff;
         }
+
         ul {
             list-style: none;
             display: flex;
+
+            @media screen and (max-width: 1200px) {
+                flex-direction: column;
+            }
+
             li {
                 position: relative;
                 white-space: nowrap;
+               
                 a {
                     display: flex;
                     padding: 0 10px;
@@ -60,7 +72,9 @@
 
                     &:hover{
                         color:#131D34;
-                        background-color: #D4F1F8;
+                        background-color: #D4F1F8;    
+                    }
+                        
                     }
                 }
 
@@ -71,7 +85,7 @@
         }
     }
 
-}
+
 
 ul .sub-menu{
     position: absolute;
@@ -83,12 +97,20 @@ ul .sub-menu{
     li{
         background-color: #D4F1F8;
         font-weight: normal;
+        
         a{
             position: relative;
+            
             &:hover{
                 background-color: #FFF;
-                color:#2498B3;
+                color           : #2498B3;
+                }
             }
+            @media screen and (max-width:1200px) {
+                &:hover{
+                    opacity: 0.7;
+                }
+
         }
     
     }
@@ -97,4 +119,38 @@ ul .sub-menu{
 ul .l-nav__join a {
     color:#FFF;
     background-color: #2498B3;
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
+}
+
+.is-open{
+    display: block;
+}
+
+@media screen and (max-width:1200px) {
+    .menu-item > a::before {
+        display : block;
+        content : "";
+        position: absolute;
+        right   : 13px;
+        height  : 2px;
+        width   : 24px;
+        background-color: #121212;
+        z-index: 9;
+    }
+
+    @media screen and (max-width:1200px) {
+        .menu-item > a::after {
+            display : block;
+            content : "";
+            position: absolute;
+            right   : 24px;
+            height  : 24px;
+            width   : 2px;
+            background-color: #121212;
+        }    
+    }
+
+        
 }
