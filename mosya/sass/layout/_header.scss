@@ -70,11 +70,15 @@
                     height: 70px;
                     align-items: center;
 
+                    @media screen and (max-width:1200px) {
+                       left: 0;
+                       right: 0;
+                    }
+
                     &:hover{
                         color:#131D34;
                         background-color: #D4F1F8;    
-                    }
-                        
+                    }                        
                     }
                 }
 
@@ -83,6 +87,15 @@
         &__join a {
             color:#ffff;
         }
+
+                            @media screen and (max-width:1200px) {
+                        &:hover{
+                            background-color: #fff;
+                            color:#121212;
+                        }
+        
+                    }
+
     }
 
 
@@ -91,6 +104,11 @@ ul .sub-menu{
     position: absolute;
     top: 70px;
     z-index: 1000;
+
+    @media screen and (max-width:1200px) {
+        position: static;  
+    }
+    
     &.close{
         display: none;
     }
@@ -105,12 +123,6 @@ ul .sub-menu{
                 background-color: #FFF;
                 color           : #2498B3;
                 }
-            }
-            @media screen and (max-width:1200px) {
-                &:hover{
-                    opacity: 0.7;
-                }
-
         }
     
     }
@@ -119,10 +131,13 @@ ul .sub-menu{
 ul .l-nav__join a {
     color:#FFF;
     background-color: #2498B3;
+
     @media screen and (max-width:1200px) {
         display: none;
     }
 }
+
+//ハンバーガーメニュークリックイベント
 
 .is-open{
     display: block;
@@ -142,12 +157,13 @@ ul .l-nav__join a {
 
     @media screen and (max-width:1200px) {
         .menu-item > a::after {
-            display : block;
-            content : "";
-            position: absolute;
-            right   : 24px;
-            height  : 24px;
-            width   : 2px;
+            display     : block;
+            content     : "";
+            position    : absolute;
+            right       : 24px;
+            height      : 24px;
+            width       : 2px;
+            margin-top  : -12px;
             background-color: #121212;
         }    
     }

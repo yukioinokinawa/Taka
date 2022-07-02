@@ -18,31 +18,27 @@
     justify-content: center;
     color: #fff;
     margin-top: -256px;
-    z-index: 1000;    
+    z-index: 900;    
 }
 
 .l-service{
     margin: 0 50px;
     width: 229px;
+}
     
-    &__title{
-        text-align: center;
-    }
-
-    &__icon{
-        align-items: center;
-        width: 230px;
-        height: 230px;
-        color: #000;
-        border-radius: 50%;
-        background-color: #fff;
-        border: solid 6px #000;
-        font-size: 100px;
-    }
-
+.l-service__title{
+    text-align: center;
 }
 
-
-.icon{
-    
+.l-service__title .l-service__icon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width    : 230px;
+    height   : 230px;
+    color    : #000;
+    border-radius: 50%;
+    background-color: #fff;
+    border   : solid 6px #000;
+    font-size: 100px;
 }

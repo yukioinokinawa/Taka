@@ -148,6 +148,12 @@ a:hover {
   height: 70px;
   align-items: center;
 }
+@media screen and (max-width: 1200px) {
+  .l-nav__body ul li a {
+    left: 0;
+    right: 0;
+  }
+}
 .l-nav__body ul li a:hover {
   color: #131D34;
   background-color: #D4F1F8;
@@ -155,11 +161,22 @@ a:hover {
 .l-nav__join a {
   color: #ffff;
 }
+@media screen and (max-width: 1200px) {
+  .l-nav:hover {
+    background-color: #fff;
+    color: #121212;
+  }
+}
 
 ul .sub-menu {
   position: absolute;
   top: 70px;
   z-index: 1000;
+}
+@media screen and (max-width: 1200px) {
+  ul .sub-menu {
+    position: static;
+  }
 }
 ul .sub-menu.close {
   display: none;
@@ -174,11 +191,6 @@ ul .sub-menu li a {
 ul .sub-menu li a:hover {
   background-color: #FFF;
   color: #2498B3;
-}
-@media screen and (max-width: 1200px) {
-  ul .sub-menu li:hover {
-    opacity: 0.7;
-  }
 }
 
 ul .l-nav__join a {
@@ -215,6 +227,7 @@ ul .l-nav__join a {
     right: 24px;
     height: 24px;
     width: 2px;
+    margin-top: -12px;
     background-color: #121212;
   }
 }
@@ -235,18 +248,22 @@ ul .l-nav__join a {
   justify-content: center;
   color: #fff;
   margin-top: -256px;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .l-service {
   margin: 0 50px;
   width: 229px;
 }
+
 .l-service__title {
   text-align: center;
 }
-.l-service__icon {
-  align-items: center;
+
+.l-service__title .l-service__icon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   width: 230px;
   height: 230px;
   color: #000;
@@ -320,12 +337,13 @@ body.is-open {
   overflow: hidden;
   height: 650px;
   background: url("/mosya/mimages/bg-hero3.png") no-repeat center center;
-  background-size: cover;
   background-attachment: fixed;
 }
 @media screen and (max-width: 767px) {
   .p-tophead {
     height: 300px;
+    padding-bottom: 320px;
+    background-position: center -15px;
   }
 }
 .p-tophead__layer {
@@ -335,11 +353,18 @@ body.is-open {
 }
 .p-tophead__layer1 {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   padding-top: 80px;
   background: url("/mosya/mimages/bg-hero1.png") no-repeat center center;
-  background-size: cover;
   z-index: 200;
+}
+@media screen and (max-width: 767px) {
+  .p-tophead__layer1 {
+    background-size: cover;
+    align-items: flex-end;
+    background-position: center -30px;
+  }
 }
 .p-tophead__layer2 {
   background: url("/mosya/mimages/bg-hero2.png") no-repeat center center;
@@ -351,13 +376,20 @@ body.is-open {
   padding: 43px 40px 19px 40px;
   background-color: #fff;
   text-align: center;
-  box-sizing: border-box;
 }
-.p-tophead__title {
-  text-align: center;
-}
-.p-tophead p {
+.p-tophead__body p {
   margin: 1.3em 0 0.5em;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .p-tophead__body p {
+    font-size: 1.3rem;
+    margin: 0.5em 0;
+  }
+}
+.p-tophead__title img {
+  width: 280px;
+  height: auto;
 }
 .p-tophead .btn a {
   background-color: #4298B3;
