@@ -8,12 +8,6 @@
     background: url('/mosya/mimages/bg-hero3.png') no-repeat center center;
     background-attachment: fixed;
     
-    @media screen and (max-width: 767px){
-            height: 300px;
-            padding-bottom: 320px;
-            background-position: center -15px;
-    }
-
 
     &__layer{
         position: absolute;
@@ -28,12 +22,6 @@
         padding-top: 80px;
         background: url('/mosya/mimages/bg-hero1.png') no-repeat center center;
         z-index: 200;
-
-        @media screen and (max-width:767px) {
-            background-size: cover;
-            align-items: flex-end;
-            background-position: center -30px;
-        }
     }
 
     &__layer2{
@@ -51,11 +39,6 @@
         p{
             margin: 1.3em 0 0.5em;
             font-weight: 700;
-
-            @media screen and (max-width:767px) {
-                font-size: 1.3rem;
-                margin: 0.5em 0;
-            }
         }
             
     }
@@ -64,6 +47,7 @@
         img{
             width: 280px;
             height: auto;
+            margin: auto;
         }
     }
 
@@ -73,6 +57,35 @@
         line-height: 1;
         padding: 24px 37px;
         display: inline-block;
+    }
+
+    //レスポンシブ処理
+    @media screen and (max-width: 767px) {
+
+        .p-tophead{
+            height: 300px;
+            padding-bottom: 320px;
+            background-position: center -15px;
+
+            &__layer1{
+                background-size: cover;
+                align-items: flex-end;
+                background-position: center -30px;    
+            }
+
+            &__body{
+                width: 100%;
+                max-width: 100%;
+                padding: 9px 0 13px;
+                border-radius: 0;
+
+                p{
+                    font-size: 1.3rem;
+                    margin: 0.5em 0;    
+                }
+            }
+        }
+        
     }
     
 }

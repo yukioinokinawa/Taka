@@ -123,6 +123,12 @@ ul .sub-menu{
                 background-color: #FFF;
                 color           : #2498B3;
                 }
+            @media screen and (max-width:1200px) {
+                &:hover{
+                    background-color: #F3FAFB;
+                    color: #121212;
+                }
+            }
         }
     
     }
@@ -148,9 +154,11 @@ ul .l-nav__join a {
         display : block;
         content : "";
         position: absolute;
+        top     : 50%;
         right   : 13px;
         height  : 2px;
         width   : 24px;
+        margin-top: -1px;
         background-color: #121212;
         z-index: 9;
     }
@@ -160,6 +168,7 @@ ul .l-nav__join a {
             display     : block;
             content     : "";
             position    : absolute;
+            top         : 50%;
             right       : 24px;
             height      : 24px;
             width       : 2px;

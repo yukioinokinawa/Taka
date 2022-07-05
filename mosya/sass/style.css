@@ -192,6 +192,12 @@ ul .sub-menu li a:hover {
   background-color: #FFF;
   color: #2498B3;
 }
+@media screen and (max-width: 1200px) {
+  ul .sub-menu li a:hover {
+    background-color: #F3FAFB;
+    color: #121212;
+  }
+}
 
 ul .l-nav__join a {
   color: #FFF;
@@ -212,9 +218,11 @@ ul .l-nav__join a {
     display: block;
     content: "";
     position: absolute;
+    top: 50%;
     right: 13px;
     height: 2px;
     width: 24px;
+    margin-top: -1px;
     background-color: #121212;
     z-index: 9;
   }
@@ -224,6 +232,7 @@ ul .l-nav__join a {
     display: block;
     content: "";
     position: absolute;
+    top: 50%;
     right: 24px;
     height: 24px;
     width: 2px;
@@ -271,6 +280,7 @@ ul .l-nav__join a {
   background-color: #fff;
   border: solid 6px #000;
   font-size: 100px;
+  align-items: center;
 }
 
 .c-inner {
@@ -339,13 +349,6 @@ body.is-open {
   background: url("/mosya/mimages/bg-hero3.png") no-repeat center center;
   background-attachment: fixed;
 }
-@media screen and (max-width: 767px) {
-  .p-tophead {
-    height: 300px;
-    padding-bottom: 320px;
-    background-position: center -15px;
-  }
-}
 .p-tophead__layer {
   position: absolute;
   width: 100%;
@@ -358,13 +361,6 @@ body.is-open {
   padding-top: 80px;
   background: url("/mosya/mimages/bg-hero1.png") no-repeat center center;
   z-index: 200;
-}
-@media screen and (max-width: 767px) {
-  .p-tophead__layer1 {
-    background-size: cover;
-    align-items: flex-end;
-    background-position: center -30px;
-  }
 }
 .p-tophead__layer2 {
   background: url("/mosya/mimages/bg-hero2.png") no-repeat center center;
@@ -381,15 +377,10 @@ body.is-open {
   margin: 1.3em 0 0.5em;
   font-weight: 700;
 }
-@media screen and (max-width: 767px) {
-  .p-tophead__body p {
-    font-size: 1.3rem;
-    margin: 0.5em 0;
-  }
-}
 .p-tophead__title img {
   width: 280px;
   height: auto;
+  margin: auto;
 }
 .p-tophead .btn a {
   background-color: #4298B3;
@@ -397,6 +388,28 @@ body.is-open {
   line-height: 1;
   padding: 24px 37px;
   display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .p-tophead .p-tophead {
+    height: 300px;
+    padding-bottom: 320px;
+    background-position: center -15px;
+  }
+  .p-tophead .p-tophead__layer1 {
+    background-size: cover;
+    align-items: flex-end;
+    background-position: center -30px;
+  }
+  .p-tophead .p-tophead__body {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    border-radius: 0;
+  }
+  .p-tophead .p-tophead__body p {
+    font-size: 1.3rem;
+    margin: 0.5em 0;
+  }
 }
 
 /**Foundation*/
