@@ -156,16 +156,10 @@ a:hover {
 }
 .l-nav__body ul li a:hover {
   color: #131D34;
-  background-color: #D4F1F8;
+  background-color: #F3FAFB;
 }
 .l-nav__join a {
   color: #ffff;
-}
-@media screen and (max-width: 1200px) {
-  .l-nav:hover {
-    background-color: #fff;
-    color: #121212;
-  }
 }
 
 ul .sub-menu {
@@ -185,18 +179,16 @@ ul .sub-menu li {
   background-color: #D4F1F8;
   font-weight: normal;
 }
+@media screen and (max-width: 1200px) {
+  ul .sub-menu li {
+    background-color: #fff;
+  }
+}
 ul .sub-menu li a {
   position: relative;
 }
 ul .sub-menu li a:hover {
-  background-color: #FFF;
-  color: #2498B3;
-}
-@media screen and (max-width: 1200px) {
-  ul .sub-menu li a:hover {
-    background-color: #F3FAFB;
-    color: #121212;
-  }
+  background-color: #F3FAFB;
 }
 
 ul .l-nav__join a {
@@ -218,7 +210,7 @@ ul .l-nav__join a {
     display: block;
     content: "";
     position: absolute;
-    top: 50%;
+    top: 30px;
     right: 13px;
     height: 2px;
     width: 24px;
@@ -232,12 +224,17 @@ ul .l-nav__join a {
     display: block;
     content: "";
     position: absolute;
-    top: 50%;
+    top: 30px;
     right: 24px;
     height: 24px;
     width: 2px;
     margin-top: -12px;
     background-color: #121212;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .menu-item:hover a::after {
+    background-color: #F3FAFB;
   }
 }
 .l-nallow {
@@ -306,8 +303,8 @@ ul .l-nav__join a {
   height: 1px;
   background: #4298B3;
   position: absolute;
-  left: calc(50% - 20px/2);
   display: block;
+  left: calc(50% - 20px/2);
   transition: transform 0.2s;
 }
 .p-hamburger::before {
@@ -324,13 +321,14 @@ ul .l-nav__join a {
   left: calc(50% - 20px/2);
   top: 50%;
   transition: transform 0.2s;
+  background: #4298B3;
 }
 .p-hamburger.is-open::before {
-  transform: rotate(45beg);
+  transform: rotate(45deg);
   top: 28px;
 }
 .p-hamburger.is-open::after {
-  transform: rotate(-45beg);
+  transform: rotate(-45deg);
   top: 28px;
 }
 .p-hamburger.is-open > span {

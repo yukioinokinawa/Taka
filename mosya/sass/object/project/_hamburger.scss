@@ -20,8 +20,8 @@ $raise      :#4298B3;
         height  : $btnHeight;
         background: $raise;
         position: absolute;
+        display: block;
         left: calc( 50% - math.div( #{$btnWidth}, 2));
-        display:block;
         transition: transform 0.2s;
     }
     &::before{
@@ -39,14 +39,15 @@ $raise      :#4298B3;
         left       : calc( 50% - math.div( #{$btnWidth}, 2 ));
         top        : 50%;
         transition : transform 0.2s;
+        background: $raise;
     }
     &.is-open{
         &::before{
-            transform: rotate( 45beg );
+            transform: rotate( 45deg );
             top      : 28px;
         }
         &::after{
-            transform: rotate( -45beg );
+            transform: rotate( -45deg );
             top      :  28px;
         }
         > span {
