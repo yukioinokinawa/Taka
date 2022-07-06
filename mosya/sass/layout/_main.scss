@@ -10,6 +10,10 @@
 .l-wrap{
     max-width: 1078px;
     margin: 0 auto;
+
+    @media screen and (max-width:1078) {
+        margin: 0 10px;
+    }
 }
 
 .l-card{
@@ -19,11 +23,26 @@
     color: #fff;
     margin-top: -256px;
     z-index: 900;    
+
+    @media screen and (max-width:767px){
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .l-service{
     margin: 0 50px;
     width: 229px;
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 2.5rem;
+        width: auto;
+    }
+
+    &__body p{
+        margin-top: 0.5rem;
+    }
 }
     
 .l-service__title{
@@ -37,9 +56,16 @@
     width    : 230px;
     height   : 230px;
     color    : #000;
+    margin: 0 auto;
     border-radius: 50%;
     background-color: #fff;
     border   : solid 6px #000;
     font-size: 100px;
     align-items: center;
+
+    h1 {
+        font-weight: 700;
+        margin-top: 0.2rem;
+        font-size: 2.4rem;
+    }
 }
