@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     height: 650px;
-    background: url('/mosya/mimages/bg-hero3.png') no-repeat center center;
+    background: url('/mimages/bg-hero3.png') no-repeat center center;
     background-attachment: fixed;
     @media screen and (max-width: 767px) {
         height: 300px;
@@ -25,13 +25,13 @@
         align-items: flex-start;
         justify-content: center;
         padding-top: 80px;
-        background: url('/mosya/mimages/bg-hero1.png') no-repeat center center;
+        background: url('/mimages/bg-hero1.png') no-repeat center center;
         z-index: 200;
         
     }
 
     &__layer2{
-        background: url('/mosya/mimages/bg-hero2.png') no-repeat center center;
+        background: url('/mimages/bg-hero2.png') no-repeat center center;
         z-index: 100;
     }
 
