@@ -3,9 +3,8 @@
 
 .u-tophead{
     position: relative;
-    overflow: hidden;
     height: 650px;
-    background: url('/mimages/bg-hero3.png') no-repeat center center;
+    background: url('/mimages/bg-hero3.png');
     background-attachment: fixed;
     background-size: cover;
     padding-top: 70px;
@@ -43,7 +42,7 @@
         padding: 43px 40px 19px 40px;
         background-color: #fff;
         text-align: center;
-        
+
 
         p{
             margin: 1.3em 0 0.5em;

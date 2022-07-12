@@ -116,7 +116,7 @@ a:hover {
   position: relative;
   white-space: nowrap;
 }
-.l-nav__body ul li:hover {
+.l-nav__body ul li > :hover {
   color: #131D34;
   background-color: #F3FAFB;
 }
@@ -144,7 +144,6 @@ a:hover {
 ul .sub-menu {
   position: absolute;
   display: block;
-  top: 70px;
   z-index: 1000;
 }
 @media screen and (max-width: 1200px) {
@@ -158,16 +157,17 @@ ul .sub-menu.close {
 ul .sub-menu > li {
   background-color: #F3FAFB;
 }
-ul .sub-menu > li:hover {
+ul .sub-menu > li > :hover {
   background-color: #fff;
-  color: #2498B3 !important;
+  color: #2498B3;
 }
 @media screen and (max-width: 1200px) {
   ul .sub-menu > li {
     background-color: #fff;
   }
-  ul .sub-menu > li:hover {
+  ul .sub-menu > li > :hover {
     background-color: #F3FAFB;
+    color: #121212;
   }
 }
 ul .sub-menu > li > a {
@@ -272,29 +272,30 @@ strong {
   align-content: center;
   align-items: center;
 }
-.l-headerlogo p {
+.l-headerlogo > p {
   margin-bottom: 0;
 }
-.l-headerlogo p a img {
+.l-headerlogo > p > a > img {
   height: 30px;
   width: auto;
   vertical-align: bottom;
 }
-.l-headerlogop a span {
+@media screen and (max-width: 1200px) {
+  .l-headerlogo > p > a > span {
+    display: none;
+  }
+}
+.l-headerlogo > p > ap a span {
   margin-left: 15px;
   font-size: 1.4rem;
   white-space: nowrap;
-}
-@media screen and (max-width: 1200px) {
-  .l-headerlogospan {
-    display: none;
-  }
 }
 
 .l-nallow {
   padding: 64px 0;
   background-color: #000;
   z-index: 500;
+  margin-top: 70px;
 }
 
 .l-wrap {
@@ -333,9 +334,6 @@ strong {
     width: auto;
   }
 }
-.l-service__body p {
-  margin-top: 0.5rem;
-}
 
 .l-service__title {
   text-align: center;
@@ -355,7 +353,7 @@ strong {
   font-size: 100px;
   align-items: center;
 }
-.l-service__title .l-service__icon h1 {
+.l-service__title .l-service__icon > p > h2 {
   font-weight: 700;
   margin-top: 0.2rem;
   font-size: 2.4rem;
@@ -428,9 +426,8 @@ body.is-open {
 /*utility/display*/
 .u-tophead {
   position: relative;
-  overflow: hidden;
   height: 650px;
-  background: url("/mimages/bg-hero3.png") no-repeat center center;
+  background: url("/mimages/bg-hero3.png");
   background-attachment: fixed;
   background-size: cover;
   padding-top: 70px;

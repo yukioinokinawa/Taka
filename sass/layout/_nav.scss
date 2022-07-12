@@ -39,7 +39,7 @@ $raise_hover:#F3FAFB;
                 position: relative;
                 white-space: nowrap;
 
-                &:hover{
+                > :hover{
                     color:#131D34;
                     background-color: #F3FAFB;    
                 }  
@@ -73,7 +73,6 @@ $raise_hover:#F3FAFB;
 ul .sub-menu{
     position: absolute;
     display: block;
-    top: 70px;
     z-index: 1000;
 
     @media screen and (max-width:1200px) {
@@ -87,16 +86,16 @@ ul .sub-menu{
     > li {
         background-color: #F3FAFB;
 
-        &:hover{
+        >:hover{
             background-color: #fff;
-            color: #2498B3 !important;
+            color: #2498B3;
             }
-
 
         @media screen and (max-width:1200px) {
             background-color: #fff;
-            &:hover{
+            >:hover{
                 background-color: #F3FAFB;
+                color: #121212;
             }
         }
         

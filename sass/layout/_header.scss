@@ -55,7 +55,10 @@ strong{
                 width: auto;
                 vertical-align: bottom;
             }
-    
+
+            > span{
+                @media screen and (max-width:1200px) {
+                    display: none;        
         }
     }
 
@@ -65,9 +68,6 @@ strong{
         white-space: nowrap;
     }
 
-    &span{
-        @media screen and (max-width:1200px) {
-            display: none;
         }
     }
 }
