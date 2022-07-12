@@ -42,13 +42,16 @@ $raise      :#4298B3;
         background: $raise;
     }
     &.is-open{
+        background-color: $raise;
         &::before{
             transform: rotate( 45deg );
             top      : 28px;
+            background-color: #fff;
         }
         &::after{
             transform: rotate( -45deg );
             top      :  28px;
+            background-color: #fff;
         }
         > span {
             background: none;

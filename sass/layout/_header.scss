@@ -19,8 +19,8 @@ $raise_hover:#F3FAFB;
 
 .l-headerlogo p a {
     line-height: 1.3;
-    font-weight: 900;
-    height: 70px;
+    font-weight: 600;
+    height: 50px;
     align-content: center;
     align-items: center;
     display: flex;
@@ -46,14 +46,17 @@ strong{
     align-content: center;
     align-items: center;
 
-    &img{
-        height: 30px;
-        width: auto;
-        vertical-align: bottom;
-    }
-
-    &p{
+    > p{
         margin-bottom: 0;
+        
+       > a{
+            > img {
+                height: 30px;
+                width: auto;
+                vertical-align: bottom;
+            }
+    
+        }
     }
 
     &p a span {
@@ -69,159 +72,3 @@ strong{
     }
 }
 
-/*nav*/
-
-.l-nav{
-
-    &__btn{
-        display: none;
-    }
-
-    &__body{
-        display: flex;
-
-        @media screen and (max-width: 1200px){
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-            z-index: 999;
-            background-color: #fff;
-        }
-
-        ul {
-            list-style  : none;
-            display     : flex;
-            font-weight : normal;
-
-            @media screen and (max-width: 1200px) {
-                flex-direction: column;
-            }
-
-            li {
-                position: relative;
-                white-space: nowrap;
-
-                &:hover{
-                    color:#131D34;
-                    background-color: #d4f1f8;    
-                }  
-
-                a {
-                    display: flex;
-                    padding: 0 10px;
-                    height: 70px;
-                    align-items: center;
-
-                    @media screen and (max-width:1200px) {
-                       left: 0;
-                       right: 0;
-                    }                    
-                    }
-                }
-
-            }       
-        }
-        &__join {
-            color:#ffff;
-            @media screen and (max-width:1200px) {
-                display: none;
-            }
-        }
-
-
-    }
-
-
-
-ul .sub-menu{
-    position: absolute;
-    top: 70px;
-    z-index: 1000;
-
-    @media screen and (max-width:1200px) {
-        position: static;  
-    }
-    
-    &.close{
-        display: none;
-    }
-    
-    li {
-        background-color: #F3FAFB;
-        font-weight: normal !important;
-
-        &:hover{
-            background-color: #fff;
-            color: #2498B3 !important;
-            }
-
-
-        @media screen and (max-width:1200px) {
-            background-color: #fff;
-        }
-        
-        a {
-            position: relative;
-        }
-    
-    }
-}
-
-ul .l-nav__join a {
-    color:#FFF;
-    background-color: #2498B3;
-
-    @media screen and (max-width:1200px) {
-        display: none;
-    }
-}
-
-//ハンバーガーメニュークリックイベント
-
-.is-open{
-    display: block;
-}
-
-@media screen and (max-width:1200px) {
-    .menu-item > a::before {
-        display : block;
-        content : "";
-        position: absolute;
-        top     : 30px;
-        right   : 13px;
-        height  : 2px;
-        width   : 24px;
-        margin-top: -1px;
-        background-color: #121212;
-        z-index: 9;
-    }
-
-    @media screen and (max-width:1200px) {
-        .menu-item > a::after {
-            display     : block;
-            content     : "";
-            position    : absolute;
-            top         : 30px;
-            right       : 24px;
-            height      : 24px;
-            width       : 2px;
-            margin-top  : -12px;
-            background-color: #121212;
-
-        }    
-    }
-.menu-item{
-    &:hover{
-        a::after{
-            background-color: #F3FAFB;
-        }
-    }
-}
-
-.strong{
-    font-size: 1.8rem;
-}
-
-        
-}

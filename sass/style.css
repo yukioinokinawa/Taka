@@ -61,7 +61,7 @@ body {
   color: #333333;
   font-size: 1.6rem;
   font-weight: bold;
-  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  font-family: "Noto Sans JP", "MyYuGothicM, YuGothic", "-apple-system", BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
@@ -82,62 +82,6 @@ a:hover {
   text-decoration: none;
 }
 
-/*header*/
-.l-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  z-index: 1100;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.l-headerlogo p a {
-  line-height: 1.3;
-  font-weight: 900;
-  height: 70px;
-  align-content: center;
-  align-items: center;
-  display: flex;
-}
-.l-headerlogo p a span {
-  margin-left: 16px;
-  font-size: 1.6rem;
-  white-space: nowrap;
-}
-
-strong {
-  font-size: 1.8rem;
-}
-
-.l-headerlogo {
-  margin: 0 0 0 21px;
-  padding-left: 10px;
-  display: flex;
-  align-content: center;
-  align-items: center;
-}
-.l-headerlogoimg {
-  height: 30px;
-  width: auto;
-  vertical-align: bottom;
-}
-.l-headerlogop {
-  margin-bottom: 0;
-}
-.l-headerlogop a span {
-  margin-left: 15px;
-  font-size: 1.4rem;
-  white-space: nowrap;
-}
-@media screen and (max-width: 1200px) {
-  .l-headerlogospan {
-    display: none;
-  }
-}
-
 /*nav*/
 .l-nav__btn {
   display: none;
@@ -149,6 +93,7 @@ strong {
   .l-nav__body {
     display: none;
     position: absolute;
+    top: 50px;
     left: 0;
     right: 0;
     z-index: 999;
@@ -158,7 +103,9 @@ strong {
 .l-nav__body ul {
   list-style: none;
   display: flex;
-  font-weight: normal;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 @media screen and (max-width: 1200px) {
   .l-nav__body ul {
@@ -171,7 +118,7 @@ strong {
 }
 .l-nav__body ul li:hover {
   color: #131D34;
-  background-color: #d4f1f8;
+  background-color: #F3FAFB;
 }
 .l-nav__body ul li a {
   display: flex;
@@ -196,6 +143,7 @@ strong {
 
 ul .sub-menu {
   position: absolute;
+  display: block;
   top: 70px;
   z-index: 1000;
 }
@@ -207,21 +155,24 @@ ul .sub-menu {
 ul .sub-menu.close {
   display: none;
 }
-ul .sub-menu li {
+ul .sub-menu > li {
   background-color: #F3FAFB;
-  font-weight: normal !important;
 }
-ul .sub-menu li:hover {
+ul .sub-menu > li:hover {
   background-color: #fff;
   color: #2498B3 !important;
 }
 @media screen and (max-width: 1200px) {
-  ul .sub-menu li {
+  ul .sub-menu > li {
     background-color: #fff;
   }
+  ul .sub-menu > li:hover {
+    background-color: #F3FAFB;
+  }
 }
-ul .sub-menu li a {
+ul .sub-menu > li > a {
   position: relative;
+  font-weight: normal !important;
 }
 
 ul .l-nav__join a {
@@ -266,8 +217,17 @@ ul .l-nav__join a {
   }
 }
 @media screen and (max-width: 1200px) {
-  .menu-item:hover a::after {
-    background-color: #F3FAFB;
+  .menu-item:hover > a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: auto;
+    margin-top: 0;
+    background-color: #f7f7f7;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -275,8 +235,64 @@ ul .l-nav__join a {
     font-size: 1.8rem;
   }
 }
+/*header*/
+.l-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 1100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.l-headerlogo p a {
+  line-height: 1.3;
+  font-weight: 600;
+  height: 50px;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+.l-headerlogo p a span {
+  margin-left: 16px;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+strong {
+  font-size: 1.8rem;
+}
+
+.l-headerlogo {
+  margin: 0 0 0 21px;
+  padding-left: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.l-headerlogo p {
+  margin-bottom: 0;
+}
+.l-headerlogo p a img {
+  height: 30px;
+  width: auto;
+  vertical-align: bottom;
+}
+.l-headerlogop a span {
+  margin-left: 15px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .l-headerlogospan {
+    display: none;
+  }
+}
+
 .l-nallow {
-  padding: 4em 0;
+  padding: 64px 0;
   background-color: #000;
   z-index: 500;
 }
@@ -388,13 +404,18 @@ ul .l-nav__join a {
   transition: transform 0.2s;
   background: #4298B3;
 }
+.p-hamburger.is-open {
+  background-color: #4298B3;
+}
 .p-hamburger.is-open::before {
   transform: rotate(45deg);
   top: 28px;
+  background-color: #fff;
 }
 .p-hamburger.is-open::after {
   transform: rotate(-45deg);
   top: 28px;
+  background-color: #fff;
 }
 .p-hamburger.is-open > span {
   background: none;
@@ -411,6 +432,8 @@ body.is-open {
   height: 650px;
   background: url("/mimages/bg-hero3.png") no-repeat center center;
   background-attachment: fixed;
+  background-size: cover;
+  padding-top: 70px;
 }
 @media screen and (max-width: 767px) {
   .u-tophead {

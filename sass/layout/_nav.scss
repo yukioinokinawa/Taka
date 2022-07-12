@@ -1,0 +1,175 @@
+$raise:#4298B3; 
+$raise_hover:#F3FAFB;
+
+
+/*nav*/
+
+.l-nav{
+
+    &__btn{
+        display: none;
+    }
+
+    &__body{
+        display: flex;
+
+        @media screen and (max-width: 1200px){
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: #fff;
+        }
+
+        ul {
+            list-style  : none;
+            display     : flex;
+            font-weight : bold;
+            margin: 0;
+            padding: 0;
+
+
+            @media screen and (max-width: 1200px) {
+                flex-direction: column;
+            }
+
+            li {
+                position: relative;
+                white-space: nowrap;
+
+                &:hover{
+                    color:#131D34;
+                    background-color: #F3FAFB;    
+                }  
+
+                a {
+                    display: flex;
+                    padding: 0 10px;
+                    height: 70px;
+                    align-items: center;
+
+                    @media screen and (max-width:1200px) {
+                       left: 0;
+                       right: 0;
+                    }                    
+                    }
+                }
+
+            }       
+        }
+        &__join {
+            color:#ffff;
+            @media screen and (max-width:1200px) {
+                display: none;
+            }
+        }
+
+    }
+
+
+
+ul .sub-menu{
+    position: absolute;
+    display: block;
+    top: 70px;
+    z-index: 1000;
+
+    @media screen and (max-width:1200px) {
+        position: static;  
+    }
+    
+    &.close{
+        display: none;
+    }
+    
+    > li {
+        background-color: #F3FAFB;
+
+        &:hover{
+            background-color: #fff;
+            color: #2498B3 !important;
+            }
+
+
+        @media screen and (max-width:1200px) {
+            background-color: #fff;
+            &:hover{
+                background-color: #F3FAFB;
+            }
+        }
+        
+       > a {
+            position: relative;
+            font-weight: normal !important;
+
+            }
+    
+    }
+}
+
+ul .l-nav__join a {
+    color:#FFF;
+    background-color: #2498B3;
+
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
+}
+
+//ハンバーガーメニュークリックイベント
+
+.is-open{
+    display: block;
+}
+
+@media screen and (max-width:1200px) {
+    .menu-item > a::before {
+        display : block;
+        content : "";
+        position: absolute;
+        top     : 30px;
+        right   : 13px;
+        height  : 2px;
+        width   : 24px;
+        margin-top: -1px;
+        background-color: #121212;
+        z-index: 9;
+    }
+
+    @media screen and (max-width:1200px) {
+        .menu-item > a::after {
+            display     : block;
+            content     : "";
+            position    : absolute;
+            top         : 30px;
+            right       : 24px;
+            height      : 24px;
+            width       : 2px;
+            margin-top  : -12px;
+            background-color: #121212;
+        }    
+    }
+.menu-item {
+    &:hover{
+    > a::after{
+            display : block;
+            content : "";
+            position: absolute;
+            top     :0;
+            right   :0;
+            bottom  : 0;
+            width   : 60px;
+            height  : auto;
+            margin-top  : 0;
+            background-color: #f7f7f7;
+        }
+    }
+}
+
+.strong{
+    font-size: 1.8rem;
+}
+
+}
