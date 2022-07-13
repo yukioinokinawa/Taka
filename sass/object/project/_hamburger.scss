@@ -9,6 +9,7 @@ $raise      :#4298B3;
     width   : 60px;
     height  : 60px;
     position: relative;
+    display: block;
     @media screen and (min-width : 1200px)  {
         display: none;
     }
@@ -43,6 +44,7 @@ $raise      :#4298B3;
     }
     &.is-open{
         background-color: $raise;
+        height: 70px;
         &::before{
             transform: rotate( 45deg );
             top      : 28px;

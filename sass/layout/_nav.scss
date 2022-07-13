@@ -16,7 +16,7 @@ $raise_hover:#F3FAFB;
         @media screen and (max-width: 1200px){
             display: none;
             position: absolute;
-            top: 50px;
+            top: 60px;
             left: 0;
             right: 0;
             z-index: 999;
@@ -47,7 +47,7 @@ $raise_hover:#F3FAFB;
                 a {
                     display: flex;
                     padding: 0 10px;
-                    height: 70px;
+                    height: 60px;
                     align-items: center;
 
                     @media screen and (max-width:1200px) {
@@ -160,7 +160,7 @@ ul .l-nav__join a {
             right   :0;
             bottom  : 0;
             width   : 60px;
-            height  : auto;
+            height  : 60px;
             margin-top  : 0;
             background-color: #f7f7f7;
         }

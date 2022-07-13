@@ -93,7 +93,7 @@ a:hover {
   .l-nav__body {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 0;
     right: 0;
     z-index: 999;
@@ -123,7 +123,7 @@ a:hover {
 .l-nav__body ul li a {
   display: flex;
   padding: 0 10px;
-  height: 70px;
+  height: 60px;
   align-items: center;
 }
 @media screen and (max-width: 1200px) {
@@ -225,7 +225,7 @@ ul .l-nav__join a {
     right: 0;
     bottom: 0;
     width: 60px;
-    height: auto;
+    height: 60px;
     margin-top: 0;
     background-color: #f7f7f7;
   }
@@ -333,6 +333,12 @@ strong {
   margin: 0 50px;
   width: 229px;
 }
+@media screen and (max-width: 1078px) {
+  .l-service {
+    width: 29.33%;
+    margin: 0 2%;
+  }
+}
 @media screen and (max-width: 767px) {
   .l-service {
     margin-bottom: 2.5rem;
@@ -375,6 +381,7 @@ strong {
   width: 60px;
   height: 60px;
   position: relative;
+  display: block;
 }
 @media screen and (min-width: 1200px) {
   .p-hamburger {
@@ -409,6 +416,7 @@ strong {
 }
 .p-hamburger.is-open {
   background-color: #4298B3;
+  height: 70px;
 }
 .p-hamburger.is-open::before {
   transform: rotate(45deg);

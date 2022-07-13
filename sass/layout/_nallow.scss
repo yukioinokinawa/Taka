@@ -39,6 +39,11 @@
     margin: 0 50px;
     width: 229px;
 
+    @media screen and (max-width:1078px) {
+        width: 29.33%;
+        margin: 0 2%;
+    }
+
     @media screen and (max-width:767px) {
         margin-bottom: 2.5rem;
         width: auto;
