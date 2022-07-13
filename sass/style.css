@@ -295,7 +295,12 @@ strong {
   padding: 64px 0;
   background-color: #000;
   z-index: 500;
-  margin-top: 70px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .l-nallow {
+    padding: auto;
+  }
 }
 
 .l-wrap {
@@ -313,7 +318,7 @@ strong {
   display: flex;
   justify-content: center;
   color: #fff;
-  margin-top: -256px;
+  margin-top: -200px;
   z-index: 900;
 }
 @media screen and (max-width: 767px) {
@@ -427,15 +432,22 @@ body.is-open {
 .u-tophead {
   position: relative;
   height: 650px;
-  background: url("/mimages/bg-hero3.png");
-  background-attachment: fixed;
-  background-size: cover;
   padding-top: 70px;
 }
 @media screen and (max-width: 767px) {
   .u-tophead {
     height: 300px;
     padding-bottom: 320px;
+  }
+}
+.u-tophead__bg {
+  background: url("/mimages/bg-hero3.png");
+  background-attachment: fixed;
+  z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  .u-tophead__bg {
+    background-size: cover;
     background-position: center -15px;
   }
 }
@@ -452,9 +464,22 @@ body.is-open {
   background: url("/mimages/bg-hero1.png") no-repeat center center;
   z-index: 200;
 }
+@media screen and (max-width: 767px) {
+  .u-tophead__layer1 {
+    background-size: cover;
+    align-items: flex-end;
+    background-position: center -30px;
+  }
+}
 .u-tophead__layer2 {
   background: url("/mimages/bg-hero2.png") no-repeat center center;
   z-index: 100;
+}
+@media screen and (max-width: 767px) {
+  .u-tophead__layer2 {
+    background-size: cover;
+    background-position: center -25px;
+  }
 }
 .u-tophead__body {
   max-width: 530px;
@@ -463,14 +488,33 @@ body.is-open {
   background-color: #fff;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .u-tophead__body {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    border-radius: 0;
+  }
+}
 .u-tophead__body p {
   margin: 1.3em 0 0.5em;
   font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .u-tophead__body p {
+    font-size: 1.3rem;
+    margin: 0.5em 0;
+  }
 }
 .u-tophead__title img {
   width: 280px;
   height: auto;
   margin: auto;
+}
+@media screen and (max-width: 767px) {
+  .u-tophead__title {
+    display: none;
+  }
 }
 .u-tophead .btn a {
   background-color: #4298B3;
@@ -479,35 +523,6 @@ body.is-open {
   padding: 24px 37px;
   display: inline-block;
   border-radius: 10px;
-}
-@media screen and (max-width: 767px) {
-  .u-tophead .u-tophead {
-    height: 300px;
-    padding-bottom: 320px;
-    background-position: center -15px;
-  }
-  .u-tophead .u-tophead__layer1 {
-    background-size: cover;
-    align-items: flex-end;
-    background-position: center -30px;
-  }
-  .u-tophead .u-tophead__body {
-    width: 100%;
-    max-width: 100%;
-    padding: 9px 0 13px;
-    border-radius: 0;
-  }
-  .u-tophead .u-tophead__body p {
-    font-size: 1.3rem;
-    margin: 0.5em 0;
-  }
-  .u-tophead .u-tophead__title {
-    display: none;
-  }
-  .u-tophead .u-tophead__layer2 {
-    background-size: cover;
-    background-position: center -25px;
-  }
 }
 
 /**Foundation*/

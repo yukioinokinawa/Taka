@@ -4,14 +4,23 @@
 .u-tophead{
     position: relative;
     height: 650px;
-    background: url('/mimages/bg-hero3.png');
-    background-attachment: fixed;
-    background-size: cover;
     padding-top: 70px;
+
     @media screen and (max-width: 767px) {
         height: 300px;
         padding-bottom: 320px;
-        background-position: center -15px;
+    }
+
+    &__bg{
+        background: url('/mimages/bg-hero3.png');
+        background-attachment: fixed;
+        z-index: 0; 
+
+        @media screen and (max-width: 767px) {
+            background-size: cover;
+            background-position: center -15px; 
+        }
+    
     }
     
 
@@ -19,6 +28,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
+
+        @media screen and (max-width: 767px) {
+        
+        }
+    
     }
 
     &__layer1{
@@ -28,12 +42,25 @@
         padding-top: 80px;
         background: url('/mimages/bg-hero1.png') no-repeat center center;
         z-index: 200;
+
+        @media screen and (max-width: 767px) {
+            background-size: cover;
+            align-items: flex-end;
+            background-position: center -30px;    
+        }
+    
         
     }
 
     &__layer2{
         background: url('/mimages/bg-hero2.png') no-repeat center center;
         z-index: 100;
+
+        @media screen and (max-width: 767px) {
+            background-size: cover;
+            background-position: center -25px;
+        }
+    
     }
 
     &__body{
@@ -43,10 +70,24 @@
         background-color: #fff;
         text-align: center;
 
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            max-width: 100%;
+            padding: 9px 0 13px;
+            border-radius: 0;
+        }
+    
+
 
         p{
             margin: 1.3em 0 0.5em;
             font-weight: 700;
+
+            @media screen and (max-width: 767px) {
+                font-size: 1.3rem;
+                margin: 0.5em 0;    
+    }
+    
         }
             
     }
@@ -57,6 +98,11 @@
             height: auto;
             margin: auto;
         }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    
     }
 
     .btn a{
@@ -68,41 +114,5 @@
         border-radius: 10px;
     }
 
-    //レスポンシブ処理
-    @media screen and (max-width: 767px) {
-
-        .u-tophead{
-            height: 300px;
-            padding-bottom: 320px;
-            background-position: center -15px;
-
-            &__layer1{
-                background-size: cover;
-                align-items: flex-end;
-                background-position: center -30px;    
-            }
-
-            &__body{
-                width: 100%;
-                max-width: 100%;
-                padding: 9px 0 13px;
-                border-radius: 0;
-
-                p{
-                    font-size: 1.3rem;
-                    margin: 0.5em 0;    
-                }
-            }
-
-            &__title{
-                display: none;
-            }
-
-            &__layer2{
-                background-size: cover;
-                background-position: center -25px;
-            }
-        }
-    }    
 }
 
